@@ -1,4 +1,6 @@
-# RC Car Firmware Modules
+# ZoomIoT
+<img width="50%" alt="image" src="https://github.com/user-attachments/assets/e888603c-a2d8-4043-9d44-4ce2d272528a" />
+
 
 Welcome to **zoomiot**, a tiny collection of drop-in Python
 
