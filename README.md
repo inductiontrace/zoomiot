@@ -1,6 +1,7 @@
 # RC Car Firmware Modules
 
 Welcome to **zoomiot**, a tiny collection of drop-in Python
+
 modules for a Raspberry Pi Pico W running MicroPython. Copy the
 modules you want onto the Pico's flash and the main driver will stitch
 them together.
@@ -39,5 +40,30 @@ and `config.json`.
 
 Create a new folder in `modules/` with a Python file implementing a
 `tick(inbox, send_mail)` function. Drop the folder onto the Pico and
-register it with the main driver.
+register it with the main driver
+
+## Installing on a Pico W (Linux)
+
+The helper scripts use [`mpremote`](https://docs.micropython.org/en/latest/reference/mpremote.html)
+to copy files over USB.
+
+1. Install mpremote if you don't have it yet:
+   ```sh
+   pip install mpremote
+   ```
+   
+2. Build a deploy folder with the modules you want:
+   ```sh
+   python scripts/prepare_deploy.py
+   ```
+   The script lists available modules, lets you tweak each `config.json`,
+   then writes everything into a new `deploy/` folder.
+   
+3. Plug in the Pico W and flash the files:
+   ```sh
+   python scripts/flash_pico.py
+   ```
+   Pick the correct `/dev/tty*` device when prompted. The script copies
+   the contents of `deploy/` onto the board and resets it.
+
 
