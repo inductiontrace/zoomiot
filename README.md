@@ -1,6 +1,6 @@
 # RC Car Firmware Modules
 
-Welcome to **iot-go-zoom**, a tiny collection of drop-in Python
+Welcome to **zoomiot**, a tiny collection of drop-in Python
 modules for a Raspberry Pi Pico W running MicroPython. Copy the
 modules you want onto the Pico's flash and the main driver will stitch
 them together.
@@ -39,5 +39,5 @@ and `config.json`.
 
 Create a new folder in `modules/` with a Python file implementing a
 `tick(inbox, send_mail)` function. Drop the folder onto the Pico and
-register it with the main driver. That's it – happy hacking!
+register it with the main driver.
 
